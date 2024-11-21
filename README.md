@@ -16,7 +16,7 @@
 <br>1. Write the SQL command to list all clients and all the columns pertaining to a client. The intended output is below.
 <br> Command: SELECT * FROM CLIENT (line 63 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/1.PNG" width="350" alt="output query 1"/> <br>
-<img src="https://github.com/user-attachments/assets/ff5fa4e8-ed51-4c29-a0ec-142a71cfa469" width="450" alt="Ex1 - Melline"/>
+<img src="https://github.com/user-attachments/assets/ff5fa4e8-ed51-4c29-a0ec-142a71cfa469" width="350" alt="Ex1 - Melline"/>
 <br>
 <br>2. Write the SQL command to change client Chris Isaac to Chris Pearson. No output for this command.
 <br> Command: UPDATE CLIENT SET client_name = 'Chris Pearson' WHERE client_name = 'Chris Isaac' (line 67 - Lab3.sql)
@@ -39,12 +39,12 @@
 <br> 6. Write the SQL command that calculates the average age of all clients 
 <br> Command: SELECT AVG(client_age) AS "Average Age" FROM CLIENT (line 87 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/6.PNG" width="90" alt="output query 6"/><br>
-<img src="https://github.com/user-attachments/assets/334e13f6-a11b-4367-b9d7-655625d73462" width="200" alt="Ex6 - Melline"/>
+<img src="https://github.com/user-attachments/assets/334e13f6-a11b-4367-b9d7-655625d73462" width="100" alt="Ex6 - Melline"/>
 <br>
 <br> 7. Write the SQL command that lists the name and age of clients who are between the ages of 22 and 40.
 <br> Command: SELECT client_name, client_age FROM CLIENT WHERE client_age > 21 AND client_age < 41 (line 91 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/7.PNG" width="180" alt="output query 7"/><br>
-<img src="https://github.com/user-attachments/assets/d98eb88a-f8f0-4990-9708-6677e3b49a04" width="250" alt="Ex7 - Melline"/>
+<img src="https://github.com/user-attachments/assets/d98eb88a-f8f0-4990-9708-6677e3b49a04" width="200" alt="Ex7 - Melline"/>
 <br>
 <br> 8. Write the SQL command that lists all home policies that have a policy limit less than or equal to $250,000.
 <br> Command: SELECT * FROM POLICY WHERE policyType = "Home" AND  policyLimits <= 250000 (line 99 - Lab3.sql)<br>
@@ -54,7 +54,7 @@
 <br> 9. Write the SQL command that lists the client's name and address for all addresses that contain 'Featherstone' and order by age in ascending order. 
 <br> Command: SELECT client_name, client_address FROM CLIENT WHERE client_address LIKE '%Featherstone%' ORDER BY client_age ASC (line 104 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/9.PNG" width="200" alt="output query 9"/><br>
-<img src="https://github.com/user-attachments/assets/f18f1c54-6642-4287-8216-7741fca86c41" width="300" alt="Ex9 - Melline"/>
+<img src="https://github.com/user-attachments/assets/f18f1c54-6642-4287-8216-7741fca86c41" width="200" alt="Ex9 - Melline"/>
 <br>
 <br> 10. Write the SQL command that lists the name, address, and age of clients who are age 35 and above and whose address contains the number 8.
 <br> Command: SELECT client_name, client_address, client_age FROM CLIENT WHERE client_age >35 AND client_address LIKE '%8%' (line 112 - Lab3.sql)<br>
@@ -64,7 +64,7 @@
 <br> 11. Write the SQL command that returns the total # of policies offered.
 <br> Command: SELECT COUNT(*) AS 'Total Count' FROM POLICY (line 119 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/11.PNG" width="80" alt="output query 11"/><br>
-<img src="https://github.com/user-attachments/assets/2d0b209b-a8aa-47c8-a747-d0da9767b77b" width="200" alt="Ex11 - Melline"/>
+<img src="https://github.com/user-attachments/assets/2d0b209b-a8aa-47c8-a747-d0da9767b77b" width="100" alt="Ex11 - Melline"/>
 <br>
 <br> 12. Write the SQL command that returns the policy type and the total count of policies by type.
 <br> Command: SELECT policyType, COUNT(*) AS 'Count of Policies' FROM POLICY GROUP BY policyType (line 123 - Lab3.sql)<br>
@@ -82,7 +82,7 @@ JOIN POLICY_LIST ON CLIENT.clientID = POLICY_LIST.CLIENT_clientID <br>
 JOIN POLICY ON POLICY_LIST.POLICY_policyID = POLICY.policyID <br>
 WHERE POLICY.policyType = 'Home' ORDER BY clientID ASC (line 132 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/14.PNG" width="450" alt="output query 14"/><br>
-<img src="https://github.com/user-attachments/assets/cd58fddf-04a1-468a-b958-68853881dbe5" width="500" alt="Ex14 - Melline"/>
+<img src="https://github.com/user-attachments/assets/cd58fddf-04a1-468a-b958-68853881dbe5" width="450" alt="Ex14 - Melline"/>
 <br>
 <br> 15. Returns all instances of a policy where the client ID is equal to #2.
 <br> Command: SELECT 	CLIENT.clientID, CLIENT.client_name, CLIENT.client_address, CLIENT.client_age, POLICY_LIST.CLIENT_clientID, POLICY.policyID FROM CLIENT <br>
@@ -90,7 +90,7 @@ JOIN POLICY_LIST ON CLIENT.clientID = POLICY_LIST.CLIENT_clientID <br>
 JOIN POLICY ON POLICY_LIST.POLICY_policyID = POLICY.policyID <br>
 WHERE CLIENT.clientID = "2" (line 140 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/15.PNG" width="450" alt="output query 15"/><br>
-<img src="https://github.com/user-attachments/assets/3d06fd74-325a-43c3-99d3-6833f62cb7cf" width="200" alt="Ex15 - Melline"/>
+<img src="https://github.com/user-attachments/assets/3d06fd74-325a-43c3-99d3-6833f62cb7cf" width="450" alt="Ex15 - Melline"/>
 <br>
 <br> -- Extra Credit --
 <br> Command: SELECT CLIENT.clientID, CLIENT.client_name, CLIENT.client_address, CLIENT.client_age, POLICY_LIST.CLIENT_clientID, POLICY_LIST.POLICY_policyID, POLICY.policyID, POLICY.policyType, POLICY.policyTerm, POLICY.policyLimits <br>
@@ -98,7 +98,7 @@ FROM CLIENT <br>
 JOIN POLICY_LIST  ON CLIENT.clientID = POLICY_LIST.CLIENT_clientID <br>
 JOIN POLICY ON POLICY_LIST.POLICY_policyID = POLICY.policyID (line 148 - Lab3.sql)<br>
 <img src="https://instructorc.github.io/site/slides/database/images/lab3/ec.PNG" width="550" alt="output query Extra credit"/><br>
-<img src="https://github.com/user-attachments/assets/2ab8baa5-27dd-4c8f-867b-e26ee3393c5a" width="500" alt="Extra - Melline"/>
+<img src="https://github.com/user-attachments/assets/2ab8baa5-27dd-4c8f-867b-e26ee3393c5a" width="550" alt="Extra - Melline"/>
 
 
 

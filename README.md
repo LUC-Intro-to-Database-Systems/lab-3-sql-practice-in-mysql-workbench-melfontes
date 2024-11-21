@@ -71,7 +71,7 @@ JOIN POLICY ON POLICY_LIST.POLICY_policyID = POLICY.policyID <br>
 WHERE POLICY.policyType = 'Home' ORDER BY clientID ASC (line 132 - Lab3.sql)<br>
 <img src="https://github.com/user-attachments/assets/cd58fddf-04a1-468a-b958-68853881dbe5" width="500" alt="Ex14 - Melline"/>
 <br>
-<br> Query 15: Returns all instances of a policy where the client ID is equal to #2.
+<br> 15. Returns all instances of a policy where the client ID is equal to #2.
 <br> Command: SELECT 	CLIENT.clientID, CLIENT.client_name, CLIENT.client_address, CLIENT.client_age, POLICY_LIST.CLIENT_clientID, POLICY.policyID FROM CLIENT <br>
 JOIN POLICY_LIST ON CLIENT.clientID = POLICY_LIST.CLIENT_clientID <br>
 JOIN POLICY ON POLICY_LIST.POLICY_policyID = POLICY.policyID <br>

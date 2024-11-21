@@ -8,4 +8,4 @@
 <br>
 <br> ER diagram: <br>
 <br>
-![Screenshot 2024-11-20 at 8 21 10 PM](https://github.com/user-attachments/assets/e52c91fa-120d-4400-a1c9-cb6255d21d64)
+<img src="[https://instructorc.github.io/site/slides/database/images/lab3/ec.PNG](https://github.com/user-attachments/assets/e52c91fa-120d-4400-a1c9-cb6255d21d64)" width="550" alt="ER Diagram - Melline"/>
